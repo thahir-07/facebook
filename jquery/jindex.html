@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <button id="btn"> click me</button>
+    <button id="btn2">button2</button>
+    <div id="div1" style="width:100px;height:100px;background-color: aqua;"></div>
+    <input type="text" id="check" placeholder="hello">
+    <label  style="display:none" id="label1"> enter minimum 5 character</label>
+    
+        <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script> 
+    <script>
+        $(document).ready(function(){
+            $("#btn2").click(function(){
+                $("#div1").slideToggle(3000)
+
+            })
+            $("#check").blur(function(){
+                var text=$(this).val()
+                console.log(text.length)
+                if(text.length<5)
+                {
+                    $("#label1").show()
+                }else
+                $("#label1").hide()
+              
+                
+           
+            })
+        })
+       /* $(document).ready(function(){
+             $("#btn").click(function(){
+                
+             })
+            
+             $("#btn").click(function(){
+               $(this).css({"height":"100px"})
+               $(this).css({"background":"yellow"})
+               $(this).css({"width":"100px"})
+               $("#btn2").css({"background-color":"cyan"})
+              
+
+
+             })
+             $("#btn2").click(function(){
+                $("#btn").css({"background":"green"
+                    
+                })
+             })
+        })*/
+    </script>
+</body>
+
+</html>

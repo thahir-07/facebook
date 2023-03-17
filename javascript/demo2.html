@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #display {
+            width: 416px;
+            height: 230px;
+            background-color: aqua;
+            margin-left: 522px
+        }
+
+        .button {
+            width: 69px;
+            height: 20px;
+
+        }
+
+        #button_red {
+            background-color: rgb(238, 12, 12);
+            color: aliceblue;
+        }
+
+        #button_green {
+            background-color: green;
+            color: aliceblue;
+        }
+
+        #button_blue {
+            background-color: blue;
+            color: aliceblue;
+        }
+
+        #button_orange {
+            background-color: orange;
+        }
+
+        .color_div {
+            padding-left: 588px;
+            padding-top: 50px;
+        }
+        #display:hover{
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="display"></div>
+    <div class="color_div">
+        <button class="button" id="button_red" onclick="display('red')">red</button>
+        <button class="button" id="button_green" onclick="display('green')">green</button>
+        <button class="button" id="button_blue" onclick="display('blue')">blue</button>
+        <button class="button" id="button_orange" onclick="display('orange')">orange</button>
+    </div>
+
+</body>
+<script>
+    function display(color) {
+        document.getElementById("display").style.backgroundColor = color
+
+    }
+</script>
+
+</html>
